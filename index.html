@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Multimodal Causal Reasoning Benchmark: Challenging Vision Large Language Models to Infer Causal Links Between Siamese Images.">
+        content="Multimodal Causal Reasoning Benchmark: Challenging Multimodal Large Language Models to Discern Causal Links Across Modalities">
   <meta name="keywords" content="Multimodal Causal Reasoning, Vision Large Language Model">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Multimodal Causal Reasoning Benchmark</title>
@@ -59,7 +59,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Multimodal Causal Reasoning Benchmark: Challenging Vision Large Language Models to Infer Causal Links Between Siamese Images</h1>
+          <h1 class="title is-1 publication-title">Multimodal Causal Reasoning Benchmark: Challenging Multimodal Large Language Models to Discern Causal Links Across Modalities</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               Zhiyuan Li,
@@ -140,7 +140,7 @@
 <section class="hero teaser">
   <div class="column has-text-centered">
     <h2 class="subtitle has-text-centered">
-      MuCR Benchmark is to Challenge Vision Large Language Models' Causality Comprehension Ability.
+      The MuCR Benchmark is used to assess MLLMs' cross-modal generalization on causal reasoning tasks.
     </h2>
     <div class="hero-body">
       <img src="./static/images/teaser.png" width="500" height="1100"
@@ -192,17 +192,15 @@
         <h2 class="title is-3" id="limitation">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Large Language Models (LLMs) have showcased exceptional ability in causal reasoning from textual information. 
-            However, will these causalities remain straightforward for Vision Large Language Models (VLLMs) when only visual hints are provided? 
-            Motivated by this, we propose a novel <b>Mu</b>ltimodal <b>C</b>ausal <b>R</b>easoning benchmark, namely <b>MuCR</b>, 
-            to challenge VLLMs to infer semantic cause-and-effect relationship when solely relying on visual cues such as action, appearance, 
-            clothing, and environment. Specifically, we introduce a prompt-driven image synthesis approach to create siamese images with embedded 
-            semantic causality and visual cues, which can effectively evaluate VLLMs' causal reasoning capabilities. Additionally, we develop 
-            tailored metrics from multiple perspectives, including image-level match, phrase-level understanding, and sentence-level explanation, 
-            to comprehensively assess VLLMs' comprehension abilities. Our extensive experiments reveal that the current state-of-the-art VLLMs are not 
-            as skilled at multimodal causal reasoning as we might have hoped.  Furthermore, we perform a comprehensive analysis to understand these models' 
-            shortcomings from different views and suggest directions for future research. We hope MuCR can serve as a valuable resource and foundational 
-            benchmark in multimodal causal reasoning research.
+            Multimodal Large Language Models (MLLMs) have showcased exceptional Chain-of-Thought (CoT) reasoning ability in complex textual inference 
+            tasks including causal reasoning. However, will these causalities remain straightforward when crucial hints hide in visual details? If not, 
+            what factors might influence cross-modal generalization? Whether we can effectively enhance their capacity for robust causal inference across 
+            both text and vision? Motivated by these, we introduce MuCR - a novel Multimodal Causal Reasoning benchmark that leverages synthetic siamese 
+            images and text pairs to challenge MLLMs. Additionally, we develop tailored metrics from multiple perspectives, including image-level match, 
+            phrase-level understanding, and sentence-level explanation, to comprehensively assess MLLMs' comprehension abilities. Our experiments reveal 
+            that current MLLMs fall short in multimodal causal reasoning compared to their performance in purely textual settings. Additionally, we find 
+            that identifying visual cues across images is key to effective cross-modal generalization. Finally, we propose the VcCoT strategy that
+            better highlights visual cues, and our results confirm its efficacy in enhancing multimodal causal reasoning.
           </p>
         </div>
       </div>
@@ -213,17 +211,14 @@
         <h2 class="title is-3" id="limitation">Previous Limitations</h2>
         <div class="content has-text-justified">
           <p>
-            We identify three major drawbacks in previous benchmarks:
+            We identify two major drawbacks in previous benchmarks:
           </p>
           <p>
             (1) <b>Absence of visual modality</b>: Linguistic causal reasoning benchmarks fail to assess visual comprehension ability.
           </p>
           <p>
-            (2) <b>Lack of multi-image understanding</b>: Current causal reasoning VQA tasks are inadequate in cross-image analysis.
-          </p>
-          <p>
-            (3) <b>Absence of cause-and-effect question</b>: Existing multi-image understanding benchmarks lack cause-and-effect questions, 
-            rendering them insufficient for an evaluation of VLLMs' causal reasoning capabilities.
+            (2) <b>Incomplete of cross-modal analysis</b>: Existing causal reasoning VQA tasks often neglect or prove inadequate for 
+            cross-modal generalization analysis.
           </p>
         </div>
         
@@ -271,8 +266,8 @@
             <h2 class="title is-3" id="distribution">Dataset Distribution</h2>
             <div class="content has-text-justified">
               <p>
-                Our MuCR benchmark consist 400 pairs of cause-and-effect images across various categories (humans, animals, plants, characters, 
-                and mixtures) and different styles (photograph and comic). The below table illustrates some examples featuring various categories 
+                Our MuCR benchmark consist 12k pairs of cause-and-effect images across various categories (humans, animals, plants, characters, 
+                and mixtures) and different styles (photograph, comic, and black-white). The below table illustrates some examples featuring various categories 
                 and styles from our MuCR benchmark as well as the distribution overview of categories and styles.
               </p>
             </div>
